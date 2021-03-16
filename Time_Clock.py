@@ -37,7 +37,7 @@ button_7 = Button(root, text = "7", padx = 40, pady = 20, command = lambda: butt
 button_8 = Button(root, text = "8", padx = 40, pady = 20, command = lambda: button_click(8))
 button_9 = Button(root, text = "9", padx = 40, pady = 20, command = lambda: button_click(9))
 button_0 = Button(root, text = "0", padx = 40, pady = 20, command = lambda: button_click(0))
-button_ok = Button(root, text = "OK", padx = 40, pady = 20, command = button_click_ok)
+button_ok = Button(root, text = "OK", padx = 35, pady = 20, command = button_click_ok)
 button_x = Button(root, text = "X", padx = 40, pady = 20, command = button_click_x)
 
 
