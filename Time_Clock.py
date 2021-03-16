@@ -7,8 +7,10 @@ root.title("Time Clock")
 #create the text entry field
 text_entry =  Entry(root, show = "*", width = 35, borderwidth = 1)
 #text_entry.grid(row = 0, column = 0, columnspan = 3 )
+
+#debug field
 debug = Entry(root,  width = 35, borderwidth = 1)
-debug.grid(row = 5, column = 0, columnspan = 3 )
+debug.grid(row = 6, column = 0, columnspan = 3 )
 
 def button_click(num):
     current = text_entry.get()
@@ -26,6 +28,14 @@ def button_click_x():
     text_entry.delete(0, END)
     return
 
+def new_window():
+    root.destroy()
+    window_2 =Tk()
+    window_2.title("Time Clock")
+    button_close = Button(window_2, text = "Close", command = window_2.destroy)
+    button_close.pack()
+
+
 #Define buttons
 button_1 = Button(root, text = "1", padx = 40, pady = 20, command = lambda: button_click(1))
 button_2 = Button(root, text = "2", padx = 40, pady = 20, command = lambda: button_click(2))
@@ -40,6 +50,7 @@ button_0 = Button(root, text = "0", padx = 40, pady = 20, command = lambda: butt
 button_ok = Button(root, text = "OK", padx = 40, pady = 20, command = button_click_ok)
 button_x = Button(root, text = "X", padx = 40, pady = 20, command = button_click_x)
 
+button_NW = Button(root, text = "New Window", command = new_window)
 
 
 #Draw buttons
@@ -58,5 +69,9 @@ button_9.grid(row = 1, column = 2)
 button_x.grid(row = 4, column = 0)
 button_0.grid(row = 4, column = 1)
 button_ok.grid(row = 4, column = 2)
+
+button_NW.grid(row = 5, column = 0, columnspan = 3)
+
+
 
 root.mainloop() 
